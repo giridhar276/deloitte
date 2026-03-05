@@ -1,0 +1,232 @@
+
+
+C - datatypes 
+-------------
+int 
+float
+char
+double
+long
+short
+
+Everything in python is object 
+every object contains methods 
+
+python - objects 
+-----------------------
+
+number 
+-------
+number can be integer or decimal or octal or hexa.
+
+aval = 10 
+bval = 34.3
+
+string 
+-------
+string is defined in single or double or triple quotes.
+
+aname = 'python programming'
+bname = "java programming"
+cname = """unix programming"""
+dname = '''donet programming'''
+
+
+
+list ( array in c)
+-----
+list contains set of elements.
+elements can be numbers or strings or any combination.
+list is defined in [].
+
+alist = [10,20,30,40]
+blist = ["java","oracle"]
+clist = [40,45.43,"java",["unix","oracle"]]
+
+
+tuple ( immutable unchangeable uneditable)
+-------
+tuple contains set of elements.
+elements can be numbers or strings or any combination.
+tuple is defined in ().
+** Elements inside tuple cannot be modified directly ***
+
+atup = (10,20,30)
+btup = ("java","oracle")
+
+
+dictionary  ( json   hashmap   hash   map   table  linkedmap  treemap)
+-----------
+dictionary contains elements in keys and values.
+dictionary is defined in {}.
+In dictionary, keys are unique . and key can be either number or string to identify the value
+value can be number , strin , list ,tuple , dictionary or any other complex datastructure.
+
+
+syntax:  object = { key:value , key:value , key:value }
+example:   book = {"chap1":10  ,"chap2": 20 ,"chap3":30 }
+
+
+index 
+------
+chap1   10
+chap2   20
+chap3   30
+chap4   40
+
+
+set
+-----
+set is UNORDERED collection of UNIQUE value of same type.
+
+aset = {10,10,10,20,30,30}
+bset  = {30,30,30,40,40,50}
+
+
+
+
+
+
+file extensions 
+----------------------
+txt 
+csv 
+pdf 
+jpg 
+log 
+xlsx 
+json 
+xml 
+yaml 
+conf 
+zip 
+rar 
+tar.gz 
+7z 
+gif 
+mp3
+mp4 
+dat 
+exe 
+bat 
+xlsx 
+pptx 
+docx
+
+
+flat files  :  txt csv log conf  dat  
+---------------------------------
+flat files are the ones which can be opened directly in any OS.
+
+
+third party files  : pdf  xlsx  tar  zip 
+----------------------------------------
+Depending on the file extension , we have to install third party library
+
+
+
+working with flat files 
+-----------------------------
+
+opening the file 
+--------------------
+syntax:   object = open(filename, mode)
+example:    fobj = open("customers.txt","r")
+            case 1: if the file is not doesnt exist .. it throws error.
+            case 2: if the file is existing .. we will be able to read the file 
+
+            fobj = open("customers.txt","w")
+            case 1: if the file is not existing .. file gets created first 
+            case 2: if the file is already existing .. it overwrites
+
+            fobj = open("customers.txt","a")
+            case 1: if the file is not existing .. file gets created first 
+            case 2: if the file is already existing .. it adds the new content.
+
+
+
+
+closing the file 
+----------------
+fobj.close()
+
+
+reading the file 
+-----------------------
+1. reading the file line by line using file object 
+2. fobj.readlines()
+3. fobj.read()
+4. using csv library 
+5. using pandas library
+
+
+writing to the file 
+----------------------
+1. fobj.write()
+2. fobj.writelines()
+3. using csv library
+4. using pandas library
+
+
+
+
+
+
+working with third party files 
+---------------------------------
+
+
+
+
+There are 2 types of errors.
+
+1. syntax errors
+2 semantic error or runtime error or logical error 
+
+
+Handling the errors that occurs during runtime is known as exception handling .
+
+try 
+except 
+else 
+finally 
+raise 
+
+
+builtin functions 
+
+user defined functions 
+
+
+
+user defined functions 
+-------------------------
+
+
+function | definition | block | subroutine | submodule 
+----------------------------------------------------
+- reusability purpose 
+- we define the block once and call it for multiple times 
+
+
+
+
+def display():
+    ###
+
+display()
+
+
+
+passing arguments 
+--------------------
+fixed arguments 
+default arguments 
+keyword arguments 
+variable length arguments 
+
+
+
+decorators 
+--------------
+A decorator is a function that takes another function, wraps it with extra behaviour and returns a new function.
