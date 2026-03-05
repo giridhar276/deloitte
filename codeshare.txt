@@ -1,0 +1,1157 @@
+
+
+
+url :
+https://cloud.palmeto.co.in
+
+password: P@lmeto@123
+
+
+username  
+----------
+Deloitte-Python01  
+Deloitte-Python02  -Asna K M
+Deloitte-Python03 - Muralidhar Bora
+Deloitte-Python04  -Rupesh-Kumar - Able to access
+Deloitte-Python05  -sandeep  Able
+Deloitte-Python06  -Akanksha Srivastava - Able to access
+Deloitte-Python07
+Deloitte-Python08  -Akhil Harwadekar - accessible
+Deloitte-Python09	-Dhanush - Able to access
+Deloitte-Python10 - Akash - Able to access 
+Deloitte-Python11 - Sidharth Juyal - Able to access
+Deloitte-Python12
+Deloitte-Python13
+Deloitte-Python14 - Sushant - able to access
+Deloitte-Python15 - Varun - able to access
+Deloitte-Python16 
+Deloitte-Python17	-	Bhawik - Able to access
+Deloitte-Python18 - Devansh
+Deloitte-Python19 -karpit  ----able to access
+Deloitte-Python20 -Thejesh - Able to Access
+Deloitte-Python21-Bhavana -able to access
+Deloitte-Python22
+Deloitte-Python23 - Niraj Awasarmol - Able to access.
+Deloitte-Python24
+Deloitte-Python25-vipul  -loggedin
+
+
+
+
+
+
+#######################
+
+
+name = "python programming"
+# slicing 
+# string[star:stop:step]
+print(name[0:8])
+print(name[8:14])
+print(name[0:18:2])
+print(name[-1])
+print(name[::-1])
+# methods
+print(name.capitalize())
+print(name.count("p"))
+print(name.upper())
+print(name.isupper())
+print(name.lower())
+print(name.islower())
+print(name.endswith("g"))   #True
+print(name.startswith("m")) #False
+print(name.split(" "))
+print(name.replace("python","java"))
+# string template
+aname = "I love {} and {}"
+print(aname.format("Hyderabad","bangalore"))
+print(aname.format("java","python"))
+print(aname.strip()) # will remove whitespaces at both ends
+print(aname.lstrip())
+print(aname.rstrip())
+
+
+#########################################################
+
+
+alist = [10,20,56,34,67,37,82]
+alist.append(92)  # adding single object
+print("After appending :",alist)
+alist.extend([74,71,17]) # adding set of values
+print("After extending:",alist)
+alist.insert(1,100)  # list.insert(index,value)
+print("AFter inserting :",alist)
+alist.pop(10)
+print("After pop operation :",alist)
+if 20 in alist:
+    alist.remove(20)
+    print("After removing :",alist)
+else:
+    print("value not in list")
+
+# sorting in ascending order
+alist.sort()
+print("sorting in ascending order :",alist)
+alist.sort(reverse=True)
+print("sorting in descending order :",alist)
+alist.reverse()
+print("reversing values :",alist)
+
+
+
+
+##############
+
+book = {"chap1":10 ,"chap2":20 ,"chap3":30}
+print("Initial dictionary:",book)
+# add key-value
+book["chap4"] = 40
+book["chap5"] = 50
+print(book)
+print(book["chap1"]) # 10
+print(book["chap2"]) # 20 
+
+# methods
+print(book.keys())
+
+for key in book.keys():
+    print(key)
+
+for key in book:
+    print(key)
+
+# values
+print(book.values())
+
+for v in book.values():
+    print(v)
+
+
+# items 
+for k,v in book.items():
+    print(k,v)
+    
+    
+    
+    
+
+
+
+#dict.pop(key)
+book.pop("chap1")   #book.pop(key) # key-value will be removed from dictionary
+print("After pop operation :",book)
+
+
+book.popitem()   # last inserted key and value will be removed
+print(book)
+book.popitem()   # last inserted key and value will be removed
+print(book)
+
+
+# combine 2 dictionaries
+book = {"chap1":10,"chap2":20}
+newbook = {"chap3":30}
+#method1
+finalbook = {book,newbook}
+print(finalbook)
+# method2
+book.update(newbook)
+print(book)
+
+
+
+##################### conditions ####################
+
+
+# simple if
+if 1 < 2 :
+    print("true")
+# if-else
+name = "python"
+if name.startswith("p"):    
+    print("its python")
+    print("inside if")
+    print("still inside if ")
+else:
+    print("its someother language")
+######################################
+if name.isupper():
+    print("string is upper")
+
+######################################
+lang = input("Enter any language :")
+if lang == "python":
+    print("you are learning python")
+elif lang == "java":
+    print("you are learning java")
+elif lang == "oracle":
+    print("you are learning oracle")
+else:
+    print("you are learning tool")
+
+
+
+
+
+
+
+
+
+aset = {10,10,10,20,30,30}
+bset  = {30,30,30,40,40,50}
+
+aset.add(10)
+aset.add(30)
+aset.add(40)
+print("Updated set: ",aset)
+print(bset)
+
+print("Union:",aset.union(bset))
+print("Intersection :",aset.intersection(bset))
+
+print("Union :",aset.difference(bset))
+print("Intersection :",bset.difference(aset))
+
+print(aset.intersection_update(bset))
+print(aset.difference_update())
+
+
+##########################################################################################
+
+
+#######string#########
+name = "python"
+for char in name:
+    print(char)
+
+#######list ##########
+alist = [10,20,30]
+for val in alist:
+    print(val)
+
+##########tup ############
+atup = (40,50,60)
+for val in atup:
+    print(val)
+
+####### dictionary ##########
+book = {"chap1":10 ,"chap2":20}
+for key in book:
+    print(key)
+
+for k,v in book.items():
+    print(k,v)
+###### set ######
+aset = {10,10,10,20,20,30}
+for val in aset:
+    print(val)
+    
+####################################################################################
+
+
+
+
+
+
+
+colors = [
+{
+"colors": "red",
+"values": "#f00"
+},
+{
+"colors": "green",
+"values": "#0f0"
+},
+{
+"colors": "blue",
+"values": "#00f"
+},
+{
+"colors": "cyan",
+"values": "#0ff"
+},
+{
+"colors": "magenta",
+"values": "#f0f"
+},
+{
+"colors": "yellow",
+"values": "#ff0"
+},
+{
+"colors": "black",
+"values": "#000"
+}
+]
+
+
+wirte a program to dislay color and its code
+
+output: 
+
+red - #f00
+green - #0f0
+..
+..
+..
+..
+black - #000
+
+
+
+for item in colors:
+    print(item['colors'] , item['values'])
+    
+    
+
+##########################################################################################
+
+Write a program to display all employee names and their departments.
+
+employees = {
+    "E001": {"name": "Alice", "department": "Finance"},
+    "E002": {"name": "Bob", "department": "IT"},
+    "E003": {"name": "Charlie", "department": "HR"}
+}
+
+
+sample output:
+
+Alice  Finance
+Bob    IT
+
+
+
+for value in employees.values():
+    if "name" in value  and "deparment" in value:
+        print(value["name"], value['department'])
+
+print("--------------")
+
+for key,value in employees.items():
+    print(value["name"], value['department'])
+print("--------------")
+
+for key in employees:
+    value = employees[key]
+    print(value['name'],value["department"])
+
+
+
+##########################################################################################
+
+Write a program to print all product names and prices.
+
+products = [
+    {"id": 101, "name": "Laptop", "price": 75000},
+    {"id": 102, "name": "Mobile", "price": 25000},
+    {"id": 103, "name": "Tablet", "price": 15000}
+]
+
+
+##########################################################################################
+
+Write a program to show student names with grades.
+
+students = [
+    {"id": 1, "name": "John", "marks": {"math": 80, "science": 75}},
+    {"id": 2, "name": "Jane", "marks": {"math": 90, "science": 85}}
+]
+
+
+
+
+for item in students:
+    print(item['name'])
+    print("-----------")
+
+    for key,value in item['marks'].items():
+        print("Subject:",key)
+        print("Marks:",value)
+        print()
+
+#######################################
+for item in students:
+    print(item['name'])
+    print("-----------")
+    print(list(item['marks'].values()))
+
+##########################################################################################
+
+Write a program to list customers to increment balance with 1000.
+
+
+customers = {
+    "C001": {"name": "Alice", "balance": 5000},
+    "C002": {"name": "Bob", "balance": 12000},
+    "C003": {"name": "Charlie", "balance": 3000}
+}
+
+
+output:
+{
+    "C001": {"name": "Alice", "balance": 6000},
+    "C002": {"name": "Bob", "balance": 13000},
+    "C003": {"name": "Charlie", "balance": 4000}
+}
+
+
+for key,value in customers.items():
+    customers[key]['balance']+=1000
+    #customers[key]['balance'] = customers[key]['balance'] + 1000
+    #value = value + 1
+print(customers)
+
+
+##########################################################################################
+
+
+write a program to read the below dictionary and display the expected output
+
+info = {
+"id": "0001",
+"type": "donut",
+"name": "Cake",
+"image":
+{
+"url": "images/0001.jpg",
+"width": 200,
+"height": 200
+},
+"thumbnail":
+{
+"url": "images/thumbnails/0001.jpg",
+"width": 32,
+"height": 32
+}
+}
+
+
+sample output:
+
+ID              : 0001
+TYPE            : donut
+NAME            : Cake
+IMAGE URL       :"images/0001.jpg
+IMAGE WIDTH     : 200
+IMAGE HEIGHT    : 200
+THUMBNAIL URL   : "images/thumbnails/0001.jpg"
+THUMBNAIL WIDTH : 32
+THUMBNAIL HEIGHT:  32
+
+
+
+
+alist = [10,20,30]
+print(type(alist))
+print(isinstance(alist,list))
+print(isinstance(alist,dict))
+
+for key,value in info.items():
+    if isinstance(value,str):
+        print(key.upper().ljust(20),":",value)
+    if isinstance(value,dict):
+        for skey,svalue in value.items():
+            finalkey = key + " " +  skey
+            print(finalkey.upper().ljust(20),":",svalue)
+
+
+
+
+
+###############################################
+
+
+data = {
+    'Sales': {
+        'North': {
+            'Alice': 'Manager',
+            'Bob': 'Sales Executive',
+            'Eve': 'Sales Coordinator',
+            'John': 'Account Manager'
+        },
+        'South': {
+            'Charlie': 'Sales Executive',
+            'Grace': 'Regional Sales Manager',
+            'Mallory': 'Business Development Associate'
+        },
+        'West': {
+            'Oscar': 'Sales Executive',
+            'Peggy': 'Account Executive',
+            'Victor': 'Territory Sales Manager'
+        }
+    },
+    'Marketing': {
+        'Digital': {
+            'David': 'SEO Specialist',
+            'Hannah': 'Content Strategist',
+            'Irene': 'Social Media Manager'
+        },
+        'Offline': {
+            'Eve': 'Event Coordinator',
+            'Jake': 'Brand Manager',
+            'Liam': 'Public Relations Specialist'
+        },
+        'Research': {
+            'Mia': 'Market Research Analyst',
+            'Noah': 'Customer Insights Manager'
+        }
+    },
+    'IT': {
+        'Infrastructure': {
+            'Quinn': 'Network Engineer',
+            'Riley': 'System Administrator',
+            'Sam': 'Cloud Architect'
+        },
+        'Development': {
+            'Tina': 'Software Engineer',
+            'Uma': 'Backend Developer',
+            'Walter': 'Full Stack Developer'
+        }
+    },
+    'HR': {
+        'Recruitment': {
+            'Yara': 'Recruitment Specialist',
+            'Zane': 'Talent Acquisition Manager',
+            'Nina': 'HR Coordinator'
+        },
+        'Employee Relations': {
+            'Oliver': 'Employee Relations Specialist',
+            'Sophia': 'HR Business Partner'
+        }
+    },
+    'Finance': {
+        'Accounting': {
+            'Xander': 'Accountant',
+            'Yvette': 'Accounts Payable Specialist',
+            'Zara': 'Financial Analyst'
+        },
+        'Audit': {
+            'Luna': 'Internal Auditor',
+            'Mason': 'Compliance Officer'
+        }
+    }
+}
+
+write a program to display the below output:
+
+
+Sales
+-----
+North
+South
+West
+
+
+Marketing
+--------
+Digital
+Offline
+Research
+
+
+IT
+---
+Infrasturcture
+Development
+
+HR
+---
+Recruitment
+Employee Relations
+
+
+
+
+
+https://github.com/giridhar276/deloitte
+
+
+
+
+# regular way
+#case1: if the file is not found.. file gets created
+#case2: if the file found.... it overwrites the existing code
+fobj = open("languages.txt","w")
+fobj.write("python\n")
+fobj.writelines(["unix","java","oracle\n"])
+
+for val in range(1,10):
+    fobj.write(str(val) + "\n")
+
+fobj.close()
+
+
+
+
+
+
+# pythonic way
+# context manager 
+# if any line begins using 'with' keyword .. it is called as context manger
+# when the file is out of indentation .. file gets closed automatically.
+# Advantage: file gets closed automatically.
+
+
+with open("languages.txt","w") as fobj:
+    fobj.write("python\n")
+    fobj.writelines(["unix","java","oracle\n"])
+
+
+
+
+
+
+
+# pythonic way
+# context manager 
+# if any line begins using 'with' keyword .. it is called as context manger
+# when the file is out of indentation .. file gets closed automatically.
+# Advantage: file gets closed automatically.
+
+
+with open("languages.txt","w") as fobj:
+    fobj.write("python\n")
+    fobj.writelines(["unix","java","oracle\n"])
+
+
+
+
+
+######################################################
+
+
+try:
+    with open("languages.txt","w") as fobj:
+        fobj.write("python\n")
+        fobj.writelines(["unix","java","oracle\n"])
+except Exception as err:
+    print(err)
+
+#################################################
+
+try:
+    with open("languages.txt","w") as fobj:
+        fobj.write("python\n")
+        fobj.writelines(["unix","java","oracle\n"])
+except TypeError as err:
+    print("Invalid operation ",err)
+except ValueError as err:
+    print("Invalid input",err)
+except (IndexError,KeyError) as err:
+    print("Invalid idnex or invalid dictionary",err)
+except Exception as err:
+    print(err)
+    
+    
+    
+    
+
+####################################
+
+
+
+try:
+    with open("languages.txt","w") as fobj:
+        fobj.write("python\n")
+        fobj.writelines(["unix","java","oracle\n"])
+except Exception as err:
+    print(err)
+else:
+    for val in range(1,10):
+        fobj.write(str(val) + "\n")
+finally:
+    print("end of the code")
+
+
+
+
+
+##################
+
+
+
+
+# method1
+with open("employee_info.csv","r") as fobj:
+    for line in fobj:
+        print(line)
+
+# method2
+with open("employee_info.csv","r") as fobj:
+    print(fobj.readlines()) # will display all the lines in list
+
+
+# method3
+with open("employee_info.csv","r") as fobj:
+    print(fobj.read())       #  output will be in a single string
+
+#method4
+import csv 
+with open("employee_info.csv","r") as fobj:
+    # converting file object to csv object
+    reader = csv.reader(fobj)
+    for line in reader:
+        print(line)
+
+
+# method5
+import pandas as pd 
+df = pd.read_csv("employees_info.csv")
+print(df)
+
+
+
+
+
+######################################################################
+
+
+write a progra to read employee_info.csv and display all the UNIQUE workclasses 
+
+
+
+import csv
+try:      
+    workset = set()
+    with open("employee_info.csv") as fobj:
+        reader = csv.reader(fobj)
+        for line in reader:
+            workclass = line[1].strip()
+            workset.add(workclass)
+        
+        for work in workset:
+            print(work)
+except Exception as err:
+    print(err)
+
+
+try:      
+    workdict = dict()
+    with open("employee_info.csv") as fobj:
+        reader = csv.reader(fobj)
+        for line in reader:
+            workclass = line[1].strip()
+            workdict[workclass] = 1   # {'public':1 , "private":1}     
+        for work in workdict:
+            print(work)
+except Exception as err:
+    print(err)
+
+
+######################################################################
+
+
+write a progra to read employee_info.csv and display the below output
+
+Total no. of males : 345
+Total no. of females: 34
+
+
+
+import csv
+try:      
+    mcount = 0
+    fcount = 0
+    with open("employee_info.csv") as fobj:
+        reader = csv.reader(fobj)
+        for line in reader:
+            gender = line[9].strip()
+            if gender == "Male":
+                mcount =mcount + 1
+            if gender == "Female":
+                fcount = fcount + 1
+        print("Male count  :",mcount)
+        print("Female count:", fcount)
+except Exception as err:
+    print(err)
+
+######################################################################
+
+
+
+# fixed arguments 
+def display(a,b):
+    print(a,b)
+display(10,20)
+
+# default arguments 
+def display(a = 0,b = 0,c = 0):
+    print(a,b,c)
+display()
+display(10)
+display(10,20)
+display(10,20,30)
+
+# keyword arguments
+def display(c,a,b):
+    print(a,b,c)
+display(b = 20,c = 30 , a = 10)
+
+# variable length aruments # *args acts like a tuple
+def display(*args):
+    for val in args:
+        print(val)
+display(10,20,30,40,50,60,12,23,34,45,56,67,45,67,45,45,43,5,3,4,65,43)
+
+
+
+
+##################################
+
+
+
+# regular way
+def display(a,b):
+    c = a + b
+    return c
+total = display(10,20)
+
+
+# pythonic way
+# lambda function 
+# lambda is the replacement of single liner function 
+# syntax: functioname = lambda variables : expression
+
+display = lambda a,b : a + b
+total = display(10,20)
+
+
+# length of the string 
+length = lambda x : len(x)
+print(length("python"))
+
+# convert to tupper
+myupper = lambda s : s.upper()
+print(myupper("hello"))
+
+#max of 2 numbers
+maximum = lambda a,b: a if a> b else b
+print(maximum(10,20))
+
+# positive , negative or zero 
+status = lambda x : "positive" if x > 0 else  "Negative" if x < 0 else "zero"
+print(status(5))
+
+# grade categorization
+grade = lambda x : "A" if x>=90 else  "B" if x>=75 else "C"
+print(grade(80))
+
+# password check
+password_check = lambda pwd : "string" if len(pwd) >=8 else "weak"
+print(password_check("pass123"))
+
+
+
+alist = ["python","unix","C"]
+blist = []
+for value in alist:
+    blist.append(len(value))
+print(blist)
+
+#map(functio,iterable)
+alist = ["python","unix","C"]
+print(list(map(lambda x: len(x),alist)))
+
+
+
+
+
+
+
+
+
+data = [1,2,3]
+print(max(data))
+
+models = [
+    {"name":"model1","accuracy":0.85},
+    {"name":"model2","accuracy":0.65},
+    {"name":"model3","accuracy":0.90}
+]
+
+
+print(models[0]["accuracy"])  
+
+getbest = max(models , key = lambda m :m['accuracy'])
+print(getbest)
+
+
+
+
+
+
+
+
+
+## just for your understnaind
+data = [1,2,3]
+print(max(data))
+
+### example
+models = [
+    {"name":"model1","accuracy":0.85},
+    {"name":"model2","accuracy":0.65},
+    {"name":"model3","accuracy":0.90}
+]
+
+
+print(models[0]["accuracy"])  
+
+getbest = max(models , key = lambda m :m['accuracy'])
+print(getbest.get("accuracy"))
+print(getbest["accuracy"])
+
+
+
+for val in range(1,10):
+    print(val)
+#list comprehesion
+#obj = [ expression forloop ]
+output = [val   for val in range(1,11)]
+print(output)
+
+#############################
+# biggest file in current folder
+##############################
+import os 
+files = [file  for file in os.listdir(".") if os.path.isfile(file)]
+biggest = max(files, key = lambda f: os.path.getsize(f))
+print(biggest,os.path.getsize(biggest),"bytes")
+
+##################################
+## without lambda and list comprehension
+####################################
+def getsize(filename):
+    return os.path.getsize(filename)
+
+files = []
+for file in os.listdir():
+    if os.path.isfile(file):
+        files.append(file)
+
+biggest = max(files , key = getsize)
+print(biggest, os.path.getsize(biggest))
+
+
+
+
+
+
+## sorting dates 
+from datetime import datetime
+dates = ["2026-02-01","2025-12-10","2026-01-05"]
+sorteddates = sorted(dates , key = lambda d : datetime.strptime(d,"%Y-%m-%d"))
+print(sorteddates)
+
+
+
+
+
+## sorting dates 
+from datetime import datetime
+dates = ["2026-02-01","2025-12-10","2026-01-05"]
+sorteddates = sorted(dates , key = lambda d : datetime.strptime(d,"%Y-%m-%d"))
+print(sorteddates)
+
+alist = [10,20,30]
+def increment(x):
+    return x + 5
+print(list(map(increment,alist)))
+
+# increment 5 to all the values
+alist = [10,20,30]
+#[15,25,35]
+#map(function,iterable)
+print(list(map(lambda x:x +5,alist)))
+
+
+largest = max(alist)
+print(list(filter(lambda x:x == largest,alist)))
+
+numbers = [1,45,4,64,443]
+evens = list(filter(lambda x: x %2 ==0, numbers))
+print(evens)
+
+strings = ["ram","python","C","cobol"]
+data = list(filter(lambda s: len(s) >=5, strings))
+print(data)
+
+
+
+
+
+
+
+##################### decorators ############################
+
+
+
+def simple_decorator(fn):
+    def wrapper():
+        print("before")
+        fn()
+        print("after")
+    return wrapper
+
+
+@simple_decorator 
+def hello():
+    print("hello")
+
+
+hello()
+
+
+#before
+#hello
+#after
+
+
+
+
+
+
+#################################################################
+
+
+
+import time 
+import os
+def timer(fn):
+    def wrapper(*args,**kwargs):
+        start = time.time()
+        out = fn(*args, **kwargs)
+        end = time.time()
+        ms = (end - start) * 1000
+        print("Total time taken :", round(ms,2),"ms")
+        return out
+    return wrapper
+
+@timer 
+def work():
+    s = 0
+    for i in range(1000000):
+        s+=i 
+    return s
+
+
+@timer
+def listfiles():
+    files = [file for file in os.listdir()]
+    return "Total no.of fiels :" + str(len(files))
+
+print("display total time for iteration")
+work()
+
+
+print()
+print("displaying file for listing files")
+listfiles()
+
+
+###############################################
+
+
+
+def no_negative(fn):
+    def wrapper(n):
+        if n < 0:
+            raise ValueError("Negative not allowed")
+        return fn(n)
+    return wrapper
+
+@no_negative
+def factorial(n):
+    out = 1
+    for i in range(2, n + 1):
+        out *= i
+    return out
+
+print(factorial(5))
+
+
+
+
+
+
+
+
+
+
+def display():
+    return "python"
+
+out = display()
+print(out)
+
+
+#generator 
+#A normal function uses return and finishes 
+# A generator function  uses yield and pauses remembering its state.
+# next time you ask for a value, it continues from where it stopped
+
+def gennumbers():
+ yield 1
+ yield 2 
+ yield 3
+
+
+g = gennumbers()
+print(next(g))
+print(next(g))
+print(next(g))
+
+
+
+####  without generator
+r = range(1,100000)
+
+
+#### with generator 
+r = range(1,10000000)
+it = iter(r)
+print(next(it))
+print(next(it))
+
+
+
+
+#################
+
+r = range(1, 6)          # 1,2,3,4,5
+it = iter(r)             # make an iterator
+
+print("range:", list(r)) # range is reusable
+
+print("First next:", next(it))
+print("Second next:", next(it))
+print("Third next:", next(it))
+
+print("Remaining values:", list(it))   # consumes the rest of the iterator
+print("After exhausted:", next(it, "DONE"))  # safe next with default
+
+
+
+
+
+#####
+
+
+def follow(file_path):
+    f = open(file_path, "r", encoding="utf-8")
+    f.seek(0, 2)  # jump to end of file (like tail -f)
+    try:
+        while True:
+            line = f.readline()
+            if line:
+                yield line.rstrip("\n")
+    finally:
+        f.close()
+
+it = iter(follow("app.log"))
+
+print("Next log:", next(it))   # waits until a new line appears in app.log
+print("Next log:", next(it))
+
