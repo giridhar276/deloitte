@@ -194,6 +194,8 @@ raise
 
 
 builtin functions 
+print(dir(__builtins__))
+
 
 user defined functions 
 
@@ -230,3 +232,247 @@ variable length arguments
 decorators 
 --------------
 A decorator is a function that takes another function, wraps it with extra behaviour and returns a new function.
+
+
+
+
+task/requirement =   core python   +    libraries   +     domain expertise
+                     ( procedural
+                       oop  )
+
+
+
+
+virtual environments 
+-----------------------------
+
+
+There are diferent tools for creating virtual environments
+
+1. using venv library 
+2. usng virtualenv library
+3. using conda library 
+4. pipenv library 
+
+
+
+using venv library 
+-------------------
+
+
+step1: create virtual enviornment 
+----------------------------------
+python -m venv <yourenvironmentname>
+python -m venv myenv1
+
+
+step2: activate your environment
+--------------------------------
+windows: myenv1\Scripts\activate
+linux : source myenv1/bin/activate
+
+
+step3: deactivate 
+--------------------
+deactivate 
+
+
+
+
+creating virtual enviornment using conda tool 
+------------------------------------------------
+
+step1: create a new enviornment 
+-------------------------------
+conda create --name myenv3 python=3.12.12
+
+step2: activate your enviornment
+--------------------------------
+activate myenv3 
+
+step3: deactivate your enviornment 
+-----------------------
+deactivate 
+
+get all the list of environments
+---------------------------------
+conda env list 
+
+get all the list of packages in your environment
+--------------------------------------------------
+conda list
+
+
+come back to your base environment 
+---------------------------------
+conda activate base 
+
+
+delete your virtual enviornment
+----------------------------------- 
+conda env remove --name myenv3
+
+
+
+installing spyder 
+----------------------
+conda install spyder
+
+opening spyder 
+----------------
+spyder 
+ 
+installing jupyter notebook 
+-------------------------
+conda install jupyter 
+
+opening jupyter notebook 
+----------------------------
+jupyter notebook 
+
+
+
+path for all the list of environments
+---------------------------------------
+C:\Users\Admin\miniconda3\envs
+
+
+########################################################################
+# pip 
+#############################################################################
+
+
+installing library 
+----------------------
+pip install requests 
+python -m pip install requests 
+
+
+get all the list of packages installed 
+--------------------------------------
+pip list 
+
+get all the information of library 
+----------------------------------
+pip  show requests 
+
+install minimum version 
+--------------------------
+pip install "requests>=2.28"
+
+upgrade package 
+------------------
+pip install --upgrade requests 
+
+
+
+
+first of all...  create requirements.txt with the below packages
+---------------------------------------------------------------------
+
+requirements.txt 
+------------------
+pandas 
+psutil 
+pymysql 
+matplotlib
+
+
+
+pip install -r requirements.txt
+
+
+
+install only for current user 
+---------------------------
+pip install --user requests 
+
+
+remove packages 
+--------------------
+pip uninstall requests pandas 
+
+remove packages without confirmation 
+-----------------------------------
+pip uninstall -y requests 
+
+list all the packages 
+---------------------------
+pip list 
+
+
+display all outdated packages
+-------------------------------
+pip list --outdated
+
+
+listing in json format 
+-----------------------
+pip list --format=json
+
+
+output installed packages in requirements format 
+------------------------------------------------
+pip freeze   ( wil display on the screen )
+
+
+pip freeze > requirements.txt 
+
+
+writing to the file 
+----------------------
+pip install -r requirements.txt 
+
+
+
+
+
+pip install requests ( it downloads and installs the package from internet )
+
+
+pip install .\requests-2.32.5.tar.gz
+
+
+
+
+
+requirement/task =     core python programming  +  libraries/framework  + domain expertise
+                         ( procedural | oops)
+
+
+
+
+
+There are 2 ways of programming 
+
+
+1. procedural programming 
+2. object oriented programming 
+
+
+
+
+object oriented programming  ( universal programming concepts)
+----------------------------------------------------------------
+
+class 
+-----
+Every class contains data members and attributes .
+
+
+object 
+-------
+object is the instance of the class.
+
+self 
+-----
+self is the instance of the object.
+
+
+constructors
+polymorphism
+inheritance
+encapsulation 
+abstraction  
+
+

@@ -1,0 +1,5 @@
+
+
+import directoryhandling
+
+directoryhandling.displayfiles()

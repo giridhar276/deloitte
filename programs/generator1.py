@@ -19,8 +19,8 @@ def gennumbers():
 
 
 g = gennumbers()
-print(next(g))
-print(next(g))
+print(next(g)) # 1
+print(next(g)) # 2
 print(next(g))
 
 
@@ -30,7 +30,7 @@ r = range(1,100000)
 
 
 #### with generator 
-r = range(1,1000)
+r = range(1,10000000)
 it = iter(r)
 print(next(it))
 print(next(it))
