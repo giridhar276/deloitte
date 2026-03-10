@@ -1,6 +1,7 @@
 
 
 
+
 url :
 https://cloud.palmeto.co.in
 
@@ -10,7 +11,7 @@ password: P@lmeto@123
 username  
 ----------
 Deloitte-Python01  
-Deloitte-Python02  -Asna K M
+Deloitte-Python02  -Asna K M - Able to access
 Deloitte-Python03 - Muralidhar Bora
 Deloitte-Python04  -Rupesh-Kumar - Able to access
 Deloitte-Python05  -sandeep  Able
@@ -31,7 +32,7 @@ Deloitte-Python19 -karpit  ----able to access
 Deloitte-Python20 -Thejesh - Able to Access
 Deloitte-Python21-Bhavana -able to access
 Deloitte-Python22
-Deloitte-Python23 - Niraj Awasarmol - Able to access.
+Deloitte-Python23 - Niraj Awasarmol - Able to access.  
 Deloitte-Python24
 Deloitte-Python25-vipul  -loggedin
 
@@ -1154,4 +1155,1818 @@ it = iter(follow("app.log"))
 
 print("Next log:", next(it))   # waits until a new line appears in app.log
 print("Next log:", next(it))
+
+
+
+
+
+
+
+step1: create virtual enviornment 
+----------------------------------
+python -m venv <yourenvironmentname>
+python -m venv myenv1
+
+
+step2: activate your environment
+--------------------------------
+
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+
+windows: myenv1\Scripts\activate
+linux : source myenv1/bin/activate
+
+
+
+
+
+step3: deactivate 
+--------------------
+deactivate 
+
+
+https://www.anaconda.com/download/success?reg=skipped
+
+
+
+C:\Users\Admin\miniconda3\envs
+
+
+
+
+
+
+using venv library 
+-------------------
+
+
+step1: create virtual enviornment 
+----------------------------------
+python -m venv <yourenvironmentname>
+python -m venv myenv1
+
+
+step2: activate your environment
+--------------------------------
+windows: myenv1\Scripts\activate
+linux : source myenv1/bin/activate
+
+
+step3: deactivate 
+--------------------
+deactivate 
+
+
+
+
+creating virtual enviornment using conda tool 
+------------------------------------------------
+
+step1: create a new enviornment 
+-------------------------------
+conda create --name myenv3 python=3.12.12
+
+step2: activate your enviornment
+--------------------------------
+activate myenv3 
+
+step3: deactivate your enviornment 
+-----------------------
+deactivate 
+
+get all the list of environments
+---------------------------------
+conda env list 
+
+get all the list of packages in your environment
+--------------------------------------------------
+conda list
+
+
+come back to your base environment 
+---------------------------------
+conda activate base 
+
+
+delete your virtual enviornment
+----------------------------------- 
+conda env remove --name myenv3
+
+
+
+installing spyder 
+----------------------
+conda install spyder
+
+opening spyder 
+----------------
+spyder 
+ 
+installing jupyter notebook 
+-------------------------
+conda install jupyter 
+
+opening jupyter notebook 
+----------------------------
+jupyter notebook 
+
+
+
+
+
+C:\Users\Admin\miniconda3\envs
+
+
+
+
+
+########################################################################
+# pip 
+#############################################################################
+
+
+installing library 
+----------------------
+pip install requests 
+python -m pip install requests 
+
+
+get all the list of packages installed 
+--------------------------------------
+pip list 
+
+get all the information of library 
+----------------------------------
+pip  show requests 
+
+install minimum version 
+--------------------------
+pip install "requests>=2.28"
+
+upgrade package 
+------------------
+pip install --upgrade requests 
+
+
+
+
+first of all...  create requirements.txt with the below packages
+---------------------------------------------------------------------
+
+requirements.txt 
+------------------
+pandas 
+psutil 
+pymysql 
+matplotlib
+
+
+
+pip install -r requirements.txt
+
+
+
+install only for current user 
+---------------------------
+pip install --user requests 
+
+
+remove packages 
+--------------------
+pip uninstall requests pandas 
+
+remove packages without confirmation 
+-----------------------------------
+pip uninstall -y requests 
+
+list all the packages 
+---------------------------
+pip list 
+
+
+display all outdated packages
+-------------------------------
+pip list --outdated
+
+
+listing in json format 
+-----------------------
+pip list --format=json
+
+
+output installed packages in requirements format 
+------------------------------------------------
+pip freeze   ( wil display on the screen )
+
+
+writing to the file 
+----------------------
+pip install -r requirements.txt 
+
+
+
+installing package from git
+-------------------------------
+pip install "git+https://github.com/psf/requests.git@main"
+
+
+
+
+
+
+##################################
+# package management using uv
+###################################
+
+
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+
+
+
+$env:PATH += ";$HOME\.local\bin"
+
+
+uv --version
+
+
+###############################################
+
+creating directory
+------------------
+mkdir my_uv_project
+
+
+nagivating to the directory
+----------------------
+cd my_uv_project
+
+
+intialize project 
+------------------
+uv init
+
+
+
+##################### information ##################
+pyproject.toml
+---------------------
+it contains package metadata and info about dependencies 
+
+uv.lock 
+-----------
+it sotores all the versions that are installed
+##################### information ##################
+
+
+
+add packages : to install a packages 
+--------------------------------
+uv add requests 
+uv add pandas numpy 
+uv add "requests>2.32"
+
+
+
+remove packages 
+-------------------
+uv remove requests 
+
+
+creating .py file 
+--------------------
+create a hello.py file in  my_uv_project
+
+
+execute the file 
+---------------
+uv run python hello.py
+
+
+
+
+
+#########################################################################
+
+
+https://pypi.org/
+
+
+step1: create account in https://pypi.org/
+
+step2:  create a folder on desktop :  hello-student-giri 
+
+step3: open vs code -->  File: New Window  ---> open  hello-student-giri 
+
+step4:
+
+hello-student-giri 
+|-  pyproject.toml ( file )
+|-  README.md( file )
+|-  LICENSE  ( file)
+| - src(folder)
+		 | - hello_student_giri(folder)
+     			|-  __init__.py  ( file)
+          |-  utils.py   ( file)
+     				
+     
+
+	
+
+
+utils.py
+-----------
+
+
+
+def greet(name):
+    return "Hello, " + name + "!"
+
+def farewell(name):
+    return "Goodbye, " + name + "!"
+
+def make_upper(text):
+    return text.upper()
+
+def count_words(text):
+    words = text.split()
+    return len(words)
+
+
+
+__init__.py 
+----------------
+
+from .utils import greet, farewell, make_upper, count_words
+
+
+README.md
+------
+# hello-student-giri
+
+A simple demo Python package uploaded to PyPI for learning packaging.
+
+## Installation
+
+```bash
+pip install hello-student-giri
+
+
+
+LICENCE 
+-------
+MIT License
+
+Copyright (c) 2026 Trainer
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files...
+
+
+pyproject.toml
+--------------
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hello-student-giri"
+version = "0.1.0"
+description = "My first PyPI package"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [
+  { name = "Giridhar", email = "abc@gmail.com" }
+]
+license = { text = "MIT" }
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+
+
+Go to terminal ( C:\Users\Admin\Desktop\hello-student-giri )
+-------------------------
+pip install build twine 
+
+
+build package 
+------------------
+python -m build
+
+
+generate token in pypi.org ( https://pypi.org/manage/account/ )
+
+
+uploading package to pypi.org
+--------------------------------
+python -m twine upload dist/*   ( it prompts for token )
+
+
+
+
+
+https://github.com/giridhar276/deloitte/tree/main
+
+
+
+
+
+
+
+# every class contains methods and variables 
+class Employee:
+    def getName(self,name):
+        #self.name is accessible in all the methods
+        self.name = name
+    def displayName(self):
+        print("Employee name :",self.name)
+
+# object instantiation or object creation
+
+emp1 = Employee()
+emp1.getName("rita")
+emp1.displayName()
+
+emp2 = Employee()
+emp2.getName("gita")
+emp2.displayName()
+
+
+emp3 = Employee()
+emp3.getName("sita")
+emp3.displayName()
+
+###############################################################
+
+
+
+
+
+# every class contains methods and variables 
+class Employee:
+    def getName(self,name,age,city):
+        #self.name is accessible in all the methods
+        self.name = name
+        self.age = age 
+        self.city = city
+    def displayName(self):
+        print("Employee name :",self.name)
+        print("Employee age  :",self.age )
+        print("Employee city :",self.city)
+
+# object instantiation or object creation
+emp1 = Employee()
+emp1.getName("rita",25,"Hyd")
+emp1.displayName()
+
+emp2 = Employee()
+emp2.getName("gita",30,"mum")
+emp2.displayName()
+
+
+emp3 = Employee()
+emp3.getName("sita",40,"chennai")
+emp3.displayName()
+
+
+
+#################################
+
+
+
+
+# every class contains methods and variables 
+class Employee:
+    def __init__(self,name,age,city):
+        #self.name is accessible in all the methods
+        self.name = name
+        self.age = age 
+        self.city = city
+    def displayName(self):
+        print("Employee name :",self.name)
+        print("Employee age  :",self.age )
+        print("Employee city :",self.city)
+
+# object instantiation or object creation
+emp1 = Employee("rita",25,"Hyd")
+emp1.displayName()
+
+emp2 = Employee("gita",30,"mum")
+emp2.displayName()
+
+
+emp3 = Employee("sita",40,"chennai")
+emp3.displayName()
+
+
+
+
+
+
+directoryhandling.py
+--------------------------
+
+import os 
+
+
+def displayfiles():
+    for file in os.listdir():
+        print(file)
+
+def displaysize():
+    for file in os.listdir():
+        print(file, os.path.getsize(file))   
+
+if __name__ == "__main__":
+    displayfiles()
+    displaysize()
+
+
+
+
+myprogram.py
+---------------
+import directoryhandling
+
+directoryhandling.displayfiles()
+
+
+###############################################################
+
+write a object oriented program to read employee_info.py and display all the lines from the file 
+
+constructor - to initialize the filename
+readFile()  - to read all the lines from the file 
+
+
+
+
+import csv
+import os 
+class ClassOperations:
+    def __init__(self,filename):
+        self.filename = filename 
+    def readFile(self):
+        with open(self.filename,"r") as self.fobj:
+            for line in self.fobj:
+                print(line)
+
+
+if __name__ == "__main__":
+    f = "employee_info.csv"
+    if os.path.isfile(f):
+        file = ClassOperations(f)
+        file.readFile()
+
+
+
+
+
+###############################################################
+web scraping - reading the data from the web
+
+write a OOP to display all the urls from www.google.com 
+
+library : beautifulsoup
+
+
+
+output:
+https://about.google/?fg=1&utm_source=google-IN&utm_medium=referral&utm_campaign=hp-header
+https://store.google.com/IN?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-IN
+..
+..
+..
+..
+
+
+
+
+
+#pip install beautifulsoup4
+import requests 
+from bs4 import BeautifulSoup
+
+response = requests.get("https://www.google.com")
+print(response.status_code)
+print("------------")
+soup = BeautifulSoup(response.text, 'html.parser')
+for link in soup.find_all('a'):
+    print(link.get('href'))
+    print("------------------")
+
+
+
+
+
+
+
+import requests 
+from bs4 import BeautifulSoup
+class Readweb:
+    def __init__(self,link):
+        self.link =link
+    def readURL(self):
+        self.response = requests.get(self.link)
+        if self.response.status_code == 200:
+            return self.response.text
+
+    def getURLS(self,data):
+        self.data = data
+        self.soup = BeautifulSoup(self.data, 'html.parser')
+        for link in self.soup.find_all('a'):
+            print(link.get('href'))
+            print("------------------")
+
+if __name__ == "__main__":
+    url = "https://www.google.com"
+    web = Readweb(url)
+    text = web.readURL()
+    print(text)
+    web.getURLS(text)
+    
+    
+    
+
+
+
+
+
+class Product:
+    def __init__(self, price, item_name, weight, brand, status='For Sale'):
+        self.price = price
+        self.item_name = item_name
+        self.weight = weight
+        self.brand = brand
+        self.status = status
+
+    def sell(self):
+        self.status = 'sold'
+        return self
+
+    def add_tax(self, tax):
+        return "Price after sales tax: ${}".format(self.price * (1 + (tax/100.0)))
+
+    def return_item(self, reason_for_return):
+        if reason_for_return.lower() == 'defective':
+            self.status = 'Defective'
+            self.price = 0
+        elif reason_for_return.lower() == 'like new':
+            self.status = 'For Sale'
+        elif reason_for_return.lower() == 'open box':
+            self.status = 'Used'
+            self.price = 0.8 * self.price # 20% discount
+        return self
+
+    def display_all(self):
+        print("Price: ${}".format(self.price))
+        print("Item Name:", self.item_name)
+        print("Weight: {}g".format(self.weight))
+        print("Brand:", self.brand)
+        print("Status:", self.status)
+        return self
+
+chocolate = Product(5, 'chocolate', 100, 'Dairy Milk')
+
+print("Initial Specs: ")
+chocolate.display_all()
+
+print ("Specs after adding tax: ")
+print(chocolate.add_tax(15))
+
+print("Specs after selling: ")
+chocolate.sell().display_all()
+
+print("Specs after returning: ")
+chocolate.return_item('defective').display_all()
+
+
+
+
+########################
+
+
+class Call:
+    def __init__(self, id, name, phone_number, time_of_call, reason_for_call):
+        self.id = id
+        self.name = name
+        self.phone_number = phone_number
+        self.time_of_call = time_of_call
+        self.reason_for_call = reason_for_call
+
+    def display(self):
+        print("ID:", self.id)
+        print("Name:", self.name)
+        print("Phone Number:", self.phone_number)
+        print("Time of call (in HHMM format):", self.time_of_call)
+        print("Reason for call:", self.reason_for_call)
+
+class CallCenter:
+    def __init__(self):
+        self.calls = []
+        self.queue_size = 0
+    def add(self, call):
+        call_list = []
+        call_list.append(call.id)
+        call_list.append(call.name)
+        call_list.append(call.phone_number)
+        call_list.append(call.time_of_call)
+        call_list.append(call.reason_for_call)
+        self.calls.append(call_list)
+        self.queue_size += 1
+        return self
+    def remove(self):
+        self.calls.pop(0)
+        self.queue_size -= 1
+        return self
+    def info(self):
+        print('Length of queue:', self.queue_size)
+        for value in self.calls:
+            print("Name:", value[1])
+            print("Phone Number:", value[2])
+call1 = Call(1, 'Ash', 123, 1234, 'thanks')
+call1.display()
+call_center = CallCenter()
+call_center.add(call1)
+call_center.info()
+# print call_center.calls
+
+
+##############
+
+
+
+
+import requests
+from bs4 import BeautifulSoup
+
+class WebScraper:
+    def __init__(self, url):
+        self.url = url
+        self.page_content = None
+
+    def fetch_content(self):
+        """Fetch the HTML content of the URL"""
+        try:
+            response = requests.get(self.url)
+            if response.status_code == 200:
+                self.page_content = response.text
+                print(f"Successfully fetched content from: {self.url}")
+            else:
+                print(f"Failed to fetch page. Status Code: {response.status_code} - {self.url}")
+        except Exception as e:
+            print(f"Error fetching the page: {e} - {self.url}")
+
+    def show_title(self):
+        """Parse the HTML and print the title of the page"""
+        if self.page_content:
+            soup = BeautifulSoup(self.page_content, 'html.parser')
+            title = soup.title.string if soup.title else "No title found"
+            print(f"Page Title: {title}")
+        else:
+            print("No page content available. Please fetch content first.")
+
+    def show_links(self):
+        """Extract and print all hyperlinks from the page"""
+        if self.page_content:
+            soup = BeautifulSoup(self.page_content, 'html.parser')
+            links = soup.find_all('a', href=True)
+            for link in links:
+                print(link['href'])
+            else:
+                print("No links found on the page.")
+        else:
+            print("No page content available. Please fetch content first.")
+
+
+if __name__ == "__main__":  
+    urls = [
+            "https://www.wikipedia.org",
+            "https://www.python.org"
+        ]
+
+    for url in urls:
+        print(f"\n📄 Scraping URL: {url}")
+        scraper = WebScraper(url)
+        scraper.fetch_content()
+        scraper.show_title()
+        scraper.show_links()
+        
+        
+        
+        
+
+
+##################################################
+
+
+
+class InstanceCounter:
+    count = 0
+
+    def __init__(self, val):
+        self.val = val
+        InstanceCounter.count += 1
+
+
+    def set_val(self, newval):
+        self.val = newval
+
+    def get_val(self):
+        return self.val
+
+    def get_count(self):
+        return InstanceCounter.count
+
+a = InstanceCounter(5)
+b = InstanceCounter(10)
+c = InstanceCounter(15)
+
+for obj in (a, b, c):
+    print("value of obj: {}".format(obj.get_val()))
+    print("Count : {}".format(obj.get_count())) #3
+    
+
+
+#####################################
+
+
+class Employee:
+   'Common base class for all employees'
+   empCount = 0   # class object (or) class variable # this variable will be shared across all objects
+
+   def __init__(self, name, salary):
+      self.name = name          # instance objects
+      self.salary = salary
+      Employee.empCount += 1    # shared variable
+ 
+
+   def displayEmployee(self):
+      """ this is my documentation of displayemployee"""
+      print ("Name : ", self.name,  ", Salary: ", self.salary)
+
+# if we execute this program directly , condition is always True
+# condition becomes false if this program is imported to other program
+if __name__ == "__main__":
+    print (Employee.__doc__) 
+    emp1 = Employee("Zara", 2000)
+    emp2 = Employee("Manni", 5000)
+    emp3 = Employee("Ram", 7000)
+    emp1.displayEmployee()
+    emp2.displayEmployee()
+    emp3.displayEmployee()
+    print (f"Total Employees {Employee.empCount}")
+    
+    
+#####################################################    
+
+#
+# you want to change the value of class variable : school_name
+# this change should refelect across all existing and future instances of the class
+# @classmethod operators on the class itself, not for individual instance.
+
+# use @classmethod when you want to chaange or access class variables - variables that are shared by all instances
+
+
+class School:
+    school_name = "Green Valley High"
+
+    def __init__(self, student_name):
+        self.student_name = student_name
+
+    @classmethod
+    def change_school_name(cls, name):
+        cls.school_name = name
+
+student1 = School("John")
+student2 = School("Jane")
+
+print(student1.school_name)
+print(student2.school_name)
+
+School.change_school_name("Blue Ridge High")
+
+print(student1.school_name)
+print(student2.school_name)
+
+
+
+
+###############################
+
+class Bank:
+    bank_name = "National Trust Bank"  # Class variable shared across all accounts
+
+    def __init__(self, account_holder):
+        self.account_holder = account_holder  # Instance variable
+
+    @classmethod
+    def change_bank_name(cls, new_name):
+        """Change the name of the bank"""
+        cls.bank_name = new_name
+
+    def show_account_info(self):
+        """Display account holder and bank information"""
+        print(f"Account Holder: {self.account_holder}, Bank: {self.bank_name}")
+
+# Create account holders
+account1 = Bank("Alice")
+account2 = Bank("Bob")
+
+# Show initial bank information
+account1.show_account_info()
+account2.show_account_info()
+
+# Change the bank name
+Bank.change_bank_name("Global Finance Bank")
+
+# Show updated bank information
+account1.show_account_info()
+account2.show_account_info()
+
+
+
+##############################
+
+
+class BankAccount:
+    def __init__(self, owner, balance):
+        self.owner = owner         # public
+        self._balance = balance    # protected
+        self.__pin = 1234          # private
+
+    def display(self):
+        print(f"Owner: {self.owner}")
+        print(f"Balance: {self._balance}")
+        print(f"PIN: {self.__pin}")  # Accessible within class
+
+account = BankAccount("Alice", 1000)
+account.display()
+
+print(account.owner)       # Public - accessible
+print(account._balance)    # Protected - accessible but not recommended
+print(account.__pin)     # Error: Private attribute not directly accessible
+
+
+####################################
+
+
+
+
+
+
+# Parent class
+class Animal:
+    def sound(self):
+        print("Animals make sound")
+
+# Child class inheriting from Animal
+class Dog(Animal):
+    def bark(self):
+        print("Dog barks")
+
+# Create an instance of Dog
+d = Dog()
+d.sound()   # Inherited method from Animal
+d.bark()    # Method from Dog
+
+# ---------------- Multiple Inheritance ----------------
+
+# First parent class
+class Father:
+    def skills(self):
+        print("Father: gardening, carpentry")
+
+# Second parent class
+class Mother:
+    def skills(self):
+        print("Mother: painting, cooking")
+
+# Child class inheriting from both Father and Mother
+class Child(Father, Mother):
+    def skills(self):
+        Father.skills(self)   # Call Father's skills
+        Mother.skills(self)   # Call Mother's skills
+        print("Child: sports")
+
+# Create instance
+c = Child()
+c.skills()
+
+
+
+##########################
+
+
+# Base class
+class BankAccount:
+    def __init__(self, account_holder):
+        self.account_holder = account_holder
+        self.balance = 1000
+
+    def deposit(self, amount):
+        self.balance += amount
+        print(f"{self.account_holder} deposited ${amount}")
+        print(f"Balance: ${self.balance}")
+
+    def withdraw(self, amount):
+        if amount <= self.balance:
+            self.balance -= amount
+            print(f"{self.account_holder} withdrew ${amount}")
+        else:
+            print("Insufficient balance")
+        print(f"Balance: ${self.balance}")
+
+# Child class 1
+class SavingsAccount(BankAccount):
+    def add_interest(self):
+        interest = self.balance * 0.05
+        self.balance += interest
+        print(f"Interest added: ${interest}")
+        print(f"Updated Balance: ${self.balance}")
+
+# Child class 2
+class CurrentAccount(BankAccount):
+    def overdraft(self):
+        self.balance += 500
+        print("Overdraft facility used: $500 added")
+        print(f"Updated Balance: ${self.balance}")
+
+# Usage
+print("\n--- Hierarchical Inheritance Example (Banking) ---")
+
+savings_user = SavingsAccount("Diana")
+savings_user.deposit(500)
+savings_user.add_interest()
+
+current_user = CurrentAccount("Ethan")
+current_user.withdraw(300)
+current_user.overdraft()
+
+
+##############################################
+
+
+
+#### multilevel inheritance 
+
+# Base class
+class BankAccount:
+    def __init__(self, account_holder):
+        self.account_holder = account_holder
+        self.balance = 1000
+
+    def deposit(self, amount):
+        self.balance += amount
+        print(f"{self.account_holder} deposited ${amount}")
+        print(f"Balance: ${self.balance}")
+
+    def withdraw(self, amount):
+        if amount <= self.balance:
+            self.balance -= amount
+            print(f"{self.account_holder} withdrew ${amount}")
+        else:
+            print("Insufficient balance")
+        print(f"Balance: ${self.balance}")
+
+
+# First-level derived class
+class SavingsAccount(BankAccount):
+    def add_interest(self):
+        interest = self.balance * 0.05
+        self.balance += interest
+        print(f"Interest added: ${interest}")
+        print(f"New Balance: ${self.balance}")
+
+
+# Second-level derived class
+class PremiumSavingsAccount(SavingsAccount):
+    def cashback_reward(self):
+        cashback = 200
+        self.balance += cashback
+        print("Cashback reward credited!")
+        print(f"Reward Amount: ${cashback}")
+        print(f"Updated Balance: ${self.balance}")
+
+
+# Usage
+print("\n--- Multilevel Inheritance Example (Banking) ---")
+customer = PremiumSavingsAccount("Carol")
+customer.deposit(500)
+customer.withdraw(200)
+customer.add_interest()
+customer.cashback_reward()
+
+
+
+###################################################
+### multiple 
+# Base class 1
+class BankAccount:
+    def __init__(self, account_holder):
+        self.account_holder = account_holder
+        self.balance = 1000
+
+    def deposit(self, amount):
+        self.balance += amount
+        print(f"{self.account_holder} deposited ${amount}")
+        print(f"Balance: ${self.balance}")
+
+    def withdraw(self, amount):
+        if amount <= self.balance:
+            self.balance -= amount
+            print(f"{self.account_holder} withdrew ${amount}")
+        else:
+            print("Insufficient balance")
+        print(f"Balance: ${self.balance}")
+
+
+# Base class 2
+class RewardProgram:
+    def __init__(self):
+        self.reward_points = 0
+
+    def add_points(self, points):
+        self.reward_points += points
+        print(f"Reward Points Added: {points}")
+        print(f"Total Reward Points: {self.reward_points}")
+
+
+# Derived class using multiple inheritance
+class PremiumBankAccount(BankAccount, RewardProgram):
+    def __init__(self, account_holder):
+        BankAccount.__init__(self, account_holder)
+        RewardProgram.__init__(self)
+
+    def deposit(self, amount):
+        print("Premium Account Deposit Processing...")
+        super().deposit(amount)
+        self.add_points(10)
+
+
+# Usage
+print("\n--- Multiple Inheritance Example (Banking) ---")
+customer = PremiumBankAccount("Bob")
+customer.deposit(500)
+customer.deposit(300)
+customer.withdraw(200)
+
+
+#################################
+
+
+# Base class
+class AccountHolder:
+    def __init__(self, name):
+        self.name = name
+
+    def show(self):
+        print(f"Account Holder Name: {self.name}")
+
+
+# Derived class
+class BankCustomer(AccountHolder):
+    def __init__(self, name, account_number):
+        super().__init__(name)   # Call base class constructor
+        self.account_number = account_number
+
+    def show(self):
+        super().show()   # Call base class method
+        print(f"Account Number: {self.account_number}")
+
+
+# Create object
+c1 = BankCustomer("Ravi", 56789)
+c1.show()
+
+
+###########################
+
+
+# Parent class
+class Shape:
+    def draw(self):
+        print("Drawing a shape")
+
+# Child class
+class Circle:
+    def draw(self):
+        print("Drawing a circle")
+
+# Another child class
+class Square:
+    def draw(self):
+        print("Drawing a square")
+
+# List of shapes
+shapes = [Circle(), Square(), Shape()]
+
+# Call draw method - behavior varies by object type
+for shape in shapes:
+    shape.draw()
+    
+    
+
+##########################################
+
+
+
+
+# Parent class
+class BankAccount:
+    def transaction(self):
+        print("Bank account performs a basic transaction")
+
+# Child class: SavingsAccount
+class SavingsAccount(BankAccount):
+    def transaction(self):
+        print("Savings account earns interest on balance")
+
+# Child class: CurrentAccount
+class CurrentAccount(BankAccount):
+    def transaction(self):
+        print("Current account allows frequent business transactions")
+
+# Child class: LoanAccount
+class LoanAccount(BankAccount):
+    def transaction(self):
+        print("Loan account processes EMI payment")
+
+# Create different account types
+accounts = [SavingsAccount(), CurrentAccount(), LoanAccount(), BankAccount()]
+
+# Each account performs its own transaction
+for acc in accounts:
+    acc.transaction()
+    
+    
+    
+######################################################    
+
+### duck typing : python does not care what the objects class is
+#                 If only cares whether the object has the required method or behavior 
+# python does not check whether the object is pycharm or vscode.
+#  If only checks whether the object has method or not
+
+
+
+# IDE class 1
+class PyCharm:
+    def execute(self):
+        print("Running code in PyCharm IDE")
+
+# IDE class 2
+class VSCode:
+    def execute(self):
+        print("Running code in VS Code IDE")
+
+# Programmer expects an object that has 'execute' method
+class Programmer:
+    def code(self, ide):
+        ide.execute()
+
+# Create instances
+ide1 = PyCharm()
+ide2 = VSCode()
+
+# Pass different ide objects
+p = Programmer()
+p.code(ide1)
+p.code(ide2)
+
+
+
+
+
+#####################
+
+
+class TextFile:
+    def read(self):
+        print("Reading from a text file...")
+
+class ImageFile:
+    def read(self):
+        print("Reading from an image file...")
+
+# Function using Duck Typing
+def read_file(file_object):
+    file_object.read()
+
+# Create file objects
+text = TextFile()
+image = ImageFile()
+
+# Read files
+read_file(text)
+read_file(image)
+
+    
+#################################################
+
+
+## Abstraction :   Abstraction means hiding the details and showing only necessary parts(essential functionality)
+# ABC means abstract base class ... you cannot create an object for this class
+# @abstractmethod : any class that inherits Vehicle must define start_engine
+#                   It is used to declate a method that must be implemented by child classes
+#ABC stards for abstract base class
+# it is used to create a class that acts like blueprint or template for other classes
+
+
+
+## abstract classes
+
+from abc import ABC, abstractmethod
+
+# Abstract class
+class Vehicle(ABC):
+    @abstractmethod
+    def start_engine(self):
+        pass  # Force subclasses to implement this method
+
+# Concrete class
+class Car(Vehicle):
+    def start_engine(self):
+        print("Car engine started!")
+
+# Concrete class
+class Bike(Vehicle):
+    def start_engine(self):
+        print("Bike engine started!")
+
+# Cannot instantiate Vehicle directly
+# v = Vehicle()  # Error
+
+car = Car()
+bike = Bike()
+
+car.start_engine()
+bike.start_engine()
+
+
+
+###############################################################
+
+
+from abc import ABC, abstractmethod
+
+# Abstract class
+class PaymentMethod(ABC):
+    @abstractmethod
+    def pay(self, amount):
+        pass
+
+
+# Concrete class
+class CreditCardPayment(PaymentMethod):
+    def pay(self, amount):
+        print(f"Paid ₹{amount} using Credit Card")
+
+
+# Concrete class
+class UPIPayment(PaymentMethod):
+    def pay(self, amount):
+        print(f"Paid ₹{amount} using UPI")
+
+
+# Concrete class
+class NetBankingPayment(PaymentMethod):
+    def pay(self, amount):
+        print(f"Paid ₹{amount} using Net Banking")
+
+
+# Usage
+p1 = CreditCardPayment()
+p2 = UPIPayment()
+p3 = NetBankingPayment()
+
+p1.pay(2500)
+p2.pay(1200)
+p3.pay(5000)
+
+
+#######################
+# polymorphism - function overloading 
+#                operator overloading
+
+
+
+
+
+
+class Book:
+    def __init__(self, title, pages):
+        self.title = title
+        self.pages = pages
+
+    # __str__ defines how the object is printed
+    def __str__(self):
+        return f"Book: {self.title} ({self.pages} pages)"
+
+    # __add__ defines behavior of + operator between objects
+    def __add__(self, other):
+        return self.pages + other.pages
+
+# Create two book objects
+b1 = Book("Python Basics", 300)
+b2 = Book("Advanced Python", 400)
+
+print(b1)   # Calls __str__()
+print(b2)   # Calls __str__()
+print(f"Total pages: {b1 + b2}")  # Calls __add__()
+
+
+
+################
+
+
+
+"""
+Topic: Magic Methods
+Practical Example: Bank Account
+"""
+
+class BankAccount:
+    def __init__(self, holder, balance):
+        self.holder = holder
+        self.balance = balance
+
+    def __str__(self):
+        return f"Account Holder: {self.holder}, Balance: ₹{self.balance}"
+
+    def __add__(self, other):
+        return self.balance + other.balance
+
+
+a1 = BankAccount("Giri", 25000)
+a2 = BankAccount("Rahul", 40000)
+
+print(a1)
+print(a2)
+print("Total Balance:", a1 + a2)
+
+
+
+
+#######################
+
+
+
+class CartItem:
+    def __init__(self, item_name, price, quantity):
+        self.item_name = item_name
+        self.price = price
+        self.quantity = quantity
+
+    # Human-readable print
+    def __str__(self):
+        return f"{self.item_name} - ₹{self.price} x {self.quantity}"
+
+    # Add total value of two items
+    def __add__(self, other):
+        return (self.price * self.quantity) + (other.price * other.quantity)
+
+    # len() returns quantity
+    def __len__(self):
+        return self.quantity
+
+
+item1 = CartItem("Shoes", 2000, 2)
+item2 = CartItem("Bag", 1500, 1)
+
+print(item1)
+print(item2)
+print("Total cart value:", item1 + item2)
+print("Quantity of first item:", len(item1))
+
+
+
+
+################
+
+
+class Calculator:
+    # Static method: utility function, does not use self or cls
+    @staticmethod
+    def add(x, y):
+        return x + y
+
+    # Class method: operates on the class itself
+    @classmethod
+    def greet(cls):
+        print(f"Welcome to {cls.__name__}'s calculator!")
+
+# Call static method directly (no object needed)
+result = Calculator.add(10, 5)
+print(f"Addition Result: {result}")
+
+# Call class method
+Calculator.greet()
+
+
+
+####################
+
+
+class Company:
+    # Class variable (shared by all employees)
+    company_name = "TechCorp"
+
+    # Constructor (instance method)
+    def __init__(self, name):
+        self.name = name  # instance variable (specific to each employee)
+
+    # Instance Method
+    def show_employee(self):
+        """
+        Accesses instance (self) and class variable.
+        """
+        print(f"{self.name} works at {Company.company_name}")
+
+    # Class Method
+    @classmethod
+    def rename_company(cls, new_name):
+        """
+        Accesses only the class (cls) — updates company name for ALL employees.
+        """
+        cls.company_name = new_name
+        print(f"Company renamed to: {cls.company_name}")
+
+    # Static Method
+    @staticmethod
+    def company_tagline():
+        """
+        Just prints a message — no access to self or cls.
+        """
+        print("Welcome! We build the future with code.")
+
+# Create employee objects
+emp1 = Company("Alice")
+emp2 = Company("Bob")
+
+# Instance Method (needs object)
+emp1.show_employee()   # Alice works at TechCorp
+emp2.show_employee()   # Bob works at TechCorp
+
+# Static Method (utility function)
+Company.company_tagline()  # Welcome! ...
+
+# Class Method (change class-wide data)
+Company.rename_company("InnoTech")
+
+# See the effect on ALL employees
+emp1.show_employee()   # Alice works at InnoTech
+emp2.show_employee()   # Bob works at InnoTech
+
+
+
+#########################################################
+
+
+
+# Create custom exception class
+class LowBalanceError(Exception):
+    def __init__(self, message="Balance too low"):
+        self.message = message
+        super().__init__(self.message)
+
+# BankAccount class
+class BankAccount:
+    def __init__(self, balance):
+        self.balance = balance
+
+    def withdraw(self, amount):
+        if amount > self.balance:
+            # Raise custom exception if insufficient funds
+            raise LowBalanceError("Cannot withdraw beyond available balance!")
+        else:
+            self.balance -= amount
+            print(f"Withdrawal successful. New balance: {self.balance}")
+
+# Create account and withdraw funds
+account = BankAccount(500)
+account.withdraw(100)  # Success
+
+# Try withdrawing more than balance
+try:
+    account.withdraw(600)
+except LowBalanceError as e:
+    print(f"Error: {e}")
+
+
+
+
+###########################################
+
+
+"""
+
+
+
+1. Class and Object
+2. Constructor (__init__)
+3. Instance variables
+4. Encapsulation
+5. Inheritance
+6. Method Overriding
+7. Polymorphism
+8. Abstraction (ABC + abstractmethod)
+9. Static Method
+10. Class Method
+11. Magic Methods (__str__, __add__)
+"""
+
+
+
+
+
+from abc import ABC, abstractmethod
+
+
+# ============================================================
+# ABSTRACTION
+# ============================================================
+# This is an abstract class.
+# It acts like a template or blueprint.
+# We cannot create objects directly from this class.
+# Any child class must implement the calculate_interest method.
+class Account(ABC):
+    # Class variable
+    # Shared by all objects of this class and its child classes
+    bank_name = "ABC Bank"
+
+    # CLASS METHOD
+    # Works with the class itself, not object data
+    @classmethod
+    def change_bank_name(cls, new_name):
+        cls.bank_name = new_name
+        print(f"Bank name changed to: {cls.bank_name}")
+
+    # STATIC METHOD
+    # Utility method - does not use self or cls
+    @staticmethod
+    def is_valid_amount(amount):
+        return amount > 0
+
+    # Constructor
+    def __init__(self, account_holder, balance):
+        # Public instance variable
+        self.account_holder = account_holder
+
+        # ENCAPSULATION
+        # Private variable using double underscore
+        # It should not be accessed directly from outside
+        self.__balance = balance
+
+    # Getter method for private balance
+    def get_balance(self):
+        return self.__balance
+
+    # Setter-like controlled method for deposit
+    def deposit(self, amount):
+        if Account.is_valid_amount(amount):
+            self.__balance += amount
+            print(f"{self.account_holder} deposited ₹{amount}")
+        else:
+            print("Invalid deposit amount")
+
+    # Setter-like controlled method for withdraw
+    def withdraw(self, amount):
+        if not Account.is_valid_amount(amount):
+            print("Invalid withdraw amount")
+        elif amount > self.__balance:
+            print("Insufficient balance")
+        else:
+            self.__balance -= amount
+            print(f"{self.account_holder} withdrew ₹{amount}")
+
+    # Magic method: controls how object is printed
+    def __str__(self):
+        return f"Bank: {self.bank_name}, Holder: {self.account_holder}, Balance: ₹{self.__balance}"
+
+    # Magic method: defines + operator between two account objects
+    def __add__(self, other):
+        return self.get_balance() + other.get_balance()
+
+    # ABSTRACT METHOD
+    # Child classes must implement this method
+    @abstractmethod
+    def calculate_interest(self):
+        pass
+
+
+# ============================================================
+# INHERITANCE
+# SavingsAccount and CurrentAccount inherit from Account
+# ============================================================
+
+class SavingsAccount(Account):
+    def __init__(self, account_holder, balance):
+        # Reuse parent constructor
+        super().__init__(account_holder, balance)
+
+    # METHOD OVERRIDING
+    # Child class provides its own version of calculate_interest
+    def calculate_interest(self):
+        interest = self.get_balance() * 0.05
+        print(f"Savings Account Interest for {self.account_holder}: ₹{interest}")
+        return interest
+
+    # Additional method specific to SavingsAccount
+    def account_type(self):
+        print("This is a Savings Account")
+
+
+class CurrentAccount(Account):
+    def __init__(self, account_holder, balance):
+        super().__init__(account_holder, balance)
+
+    # METHOD OVERRIDING
+    def calculate_interest(self):
+        interest = self.get_balance() * 0.02
+        print(f"Current Account Interest for {self.account_holder}: ₹{interest}")
+        return interest
+
+    # Additional method specific to CurrentAccount
+    def account_type(self):
+        print("This is a Current Account")
+
+
+# ============================================================
+# POLYMORPHISM
+# Same method name behaves differently based on object type
+# ============================================================
+def show_interest(account):
+    """
+    This function accepts any object that has calculate_interest().
+    This is polymorphism in action.
+    """
+    account.calculate_interest()
+
+
+# ============================================================
+# MAIN PROGRAM
+# ============================================================
+
+print("\n========== CREATE OBJECTS ==========")
+
+# Object creation
+acc1 = SavingsAccount("Giri", 50000)
+acc2 = CurrentAccount("Ravi", 70000)
+
+print("\n========== PRINT OBJECTS (__str__) ==========")
+print(acc1)
+print(acc2)
+
+print("\n========== DEPOSIT AND WITHDRAW ==========")
+acc1.deposit(5000)
+acc1.withdraw(2000)
+
+acc2.deposit(10000)
+acc2.withdraw(15000)
+
+print("\n========== CHECK UPDATED OBJECTS ==========")
+print(acc1)
+print(acc2)
+
+print("\n========== ENCAPSULATION ==========")
+# Access balance using getter method
+print(f"{acc1.account_holder}'s balance: ₹{acc1.get_balance()}")
+print(f"{acc2.account_holder}'s balance: ₹{acc2.get_balance()}")
+
+# Direct access like acc1.__balance will not work properly
+# because __balance is private
+
+print("\n========== INHERITANCE ==========")
+acc1.account_type()
+acc2.account_type()
+
+print("\n========== POLYMORPHISM ==========")
+show_interest(acc1)   # SavingsAccount version
+show_interest(acc2)   # CurrentAccount version
+
+print("\n========== MAGIC METHOD: __add__ ==========")
+total_balance = acc1 + acc2
+print(f"Total balance of both accounts: ₹{total_balance}")
+
+print("\n========== STATIC METHOD ==========")
+print("Is 1000 a valid amount?", Account.is_valid_amount(1000))
+print("Is -50 a valid amount?", Account.is_valid_amount(-50))
+
+print("\n========== CLASS METHOD ==========")
+print("Old Bank Name:", Account.bank_name)
+Account.change_bank_name("Future Secure Bank")
+print("New Bank Name in acc1:", acc1.bank_name)
+print("New Bank Name in acc2:", acc2.bank_name)
+
+print("\n========== FINAL OBJECT DETAILS ==========")
+print(acc1)
+print(acc2)
+
+
+###############################
+
 
